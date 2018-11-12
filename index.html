@@ -7,10 +7,14 @@
 	<form method="POST" action="action.php">
 		<input class="a1" type="text" value="" name="number1"></input>
 		<br><input class="a1" type="text" value="" name="number2"></input>
-		<input type="submit" value="+" name="+"></input>
-		<input type="submit" value="-" name="-"></input>
-		<input type="submit" value="*" name="*"></input>
-		<input type="submit" value="/" name="/"></input>
+		<select name="act">
+			<option value="/">/</option>
+			<option value="*">*</option>
+			<option value="-">-</option>
+			<option value="+">+</option>
+		</select>
+		<input type="submit" value="calc" name="btn"></input>
+
 	</form>
 </body>
 </head>

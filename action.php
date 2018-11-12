@@ -1,34 +1,34 @@
-<?php 
-if(isset($_POST['+']))
-	{
-		$data1=$_POST;
-		$data2=$_POST;
-		$pic1=$data1['number1'];
-		$pic2=$data2['number2'];
-		echo $pic1+$pic2;
+<?php
+if (isset($_POST['btn'])) {
+ 	
+
+
+	$data=$_POST;
+	$pic1=$data['number1'];
+	$pic2=$data['number2'];
+	$act=$data['act'];
+		
+
+	switch ($act) {
+		case '/':
+			echo "$pic1/$pic2=";
+			echo $pic1/$pic2;
+			break;
+		case '*':
+			echo "$pic1*$pic2=";
+			echo $pic1*$pic2;
+			break;
+					case '-':
+			echo "$pic1-$pic2=";
+			echo $pic1-$pic2;
+			break;
+					case '+':
+			echo "$pic1+$pic2=";
+			echo $pic1+$pic2;
+			break;		
+		default:
+			echo "WTF????";
+			break;
 	}
-elseif (isset($_POST['-']))
-	{
-		$data1=$_POST;
-		$data2=$_POST;
-		$pic1=$data1['number1'];
-		$pic2=$data2['number2'];
-		echo $pic1-$pic2;
-	}
-	elseif (isset($_POST['*']))
-	{
-		$data1=$_POST;
-		$data2=$_POST;
-		$pic1=$data1['number1'];
-		$pic2=$data2['number2'];
-		echo $pic1*$pic2;
-	}
-	elseif (isset($_POST['/']))
-	{
-		$data1=$_POST;
-		$data2=$_POST;
-		$pic1=$data1['number1'];
-		$pic2=$data2['number2'];
-		echo $pic1/$pic2;
-	}
-?>
+	echo '<br><a href="index.html">back</a>';
+}
